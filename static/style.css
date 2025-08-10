@@ -1,0 +1,218 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: #2a9d8f;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgb(42 157 143 / 0.3);
+}
+.header h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+.header p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+/* Navigation */
+.nav {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.nav .container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.nav a {
+  color: #264653;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.nav a:hover {
+  color: #2a9d8f;
+}
+
+/* Sections */
+.section {
+  margin: 3rem 0;
+}
+
+/* Cards for roles and employment */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.card {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #264653;
+  min-width: 160px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgb(42 157 143 / 0.3);
+}
+
+.employment-cards .card {
+  min-width: 120px;
+  color: #2a9d8f;
+}
+
+/* Contact Section */
+.contact-section h2 {
+  text-align: center;
+  color: #2a9d8f;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Flash Messages */
+.flash-message {
+  max-width: 600px;
+  margin: 0 auto 1rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+}
+.flash-message.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+.flash-message.danger {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgb(0 0 0 / 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.form-row input,
+.form-row select {
+  flex: 1 1 45%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 7px;
+  transition: border-color 0.3s ease;
+}
+.form-row input:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: #2a9d8f;
+}
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: 1.8px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+textarea:focus {
+  outline: none;
+  border-color: #2a9d8f;
+}
+.file-label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #264653;
+  display: block;
+}
+input[type="file"] {
+  font-size: 1rem;
+  border: none;
+  color: #2a9d8f;
+  cursor: pointer;
+}
+
+/* Button */
+.btn {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #21867a;
+}
+
+/* Footer */
+.footer {
+  background: #264653;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row input,
+  .form-row select {
+    flex: 1 1 100%;
+  }
+}
