@@ -4,16 +4,21 @@ import re
 import os
 from werkzeug.utils import secure_filename
 
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
+from dotenv import load_dotenv
+
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Replace with a strong secret key
 
-EMAIL_ADDRESS = "shyamsonu13@gmail.com"
-EMAIL_PASSWORD = "kart hieh sadk cmgb"
+# Load environment variables from .env file
+load_dotenv()
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
